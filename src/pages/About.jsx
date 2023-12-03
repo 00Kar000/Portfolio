@@ -18,7 +18,7 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer based in Armenia, specializing in technical
+          Frontend Developer based in Armenia, specializing in technical
           education through hands-on learning and building applications
         </p>
       </div>
@@ -56,11 +56,6 @@ const About = () => {
               key={experience.company_name}
               date={experience.date}
               icon={<div className="w-full h-full flex justify-center items-center">
-                <img 
-                src={experience.icon}
-                alt={experience.company_name}
-                className="w-[60%] h-[60%] object-contain"
-                />
               </div>}
               contentStyle={{
                 borderBottom:"8px",
@@ -75,12 +70,6 @@ const About = () => {
                   <h3 className="text-black text-xl font-poppins font-semibold">
                     {experience.title}
                   </h3>
-                  <p
-                    className="text-black-500 font-medium font-base"
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
-                  </p>
                 </div>
 
                 <ul className="my-5 list-disc ml-5 space-y-2">

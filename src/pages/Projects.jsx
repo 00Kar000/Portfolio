@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
-import {projects} from '../constants'
-import { arrow } from '../assets/icons';
-import CTA from '../components/CTA';
+import { Link } from "react-router-dom";
+import { projects } from "../constants";
+import { arrow } from "../assets/icons";
+import CTA from "../components/CTA";
+import { FaEye } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Projects = () => {
   return (
@@ -9,7 +13,7 @@ const Projects = () => {
       <h1 className="head-text">
         My
         <span className=" blue-gradient_text font-semibold drop-shadow">
-          Projects
+          &nbsp;Projects
         </span>
       </h1>
 
@@ -24,46 +28,43 @@ const Projects = () => {
       </div>
 
       <div className="flex flex-wrap my-20 gap-16">
-           {projects.map((project) => (
-            <div className='lg:w-[400px] w-full' key={project.name}>
-              <div className='block-container w-12 h-12'>
-                <div className={`btn-back rounded-xl ${project.theme}`} />
-                <div className='btn-front rounded-xl flex justify-center items-center'>
-                  <img 
-                  src={project.iconUrl}
-                  alt="Project Icon"
-                  className='w-1/2 h-1/2 object-contain'                  
-                  />
-                </div>
-              </div>
-
-              <div className='mt-5 flex flex-col'>
-                  <h4 className='text-2xl font-poppins font-semibold'>
-                    {project.name}
-                    <p className='mt-2 text-slate-500'>{project.description}</p>
-                    <div className='mt-5 flex items-center gap-2 font-poppins'>
-                      <Link
-                      to={project.link}
-                      target='_blank'
-                      rel="noopener noreferrer"
-                      className='font-semibold text-blue-600'
-                      >
-                        Live Link
-                      </Link>
-                      <img 
-                      src={arrow}
-                       className='w-4 h-4 object-contain'
-                      />
+        {projects.map((project) => (
+          <div className="lg:w-[400px] w-full rounded-lg shadow-xl" key={project.name}>
+            <div className="flex flex-col  py-3">
+              <h4 className="text-2xl font-poppins font-semibold">
+                <div className="mt-5 flex flex-col items-center gap-2 font-poppins">
+                  <div
+                    className="font-semibold text-blue-600"
+                  >
+                    <p className="w-[100%] py-1  text-center">
+                      {project.name}
+                    </p>
+                    <Zoom>
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="object-contain"
+                      width={400}
+                      height={200}
+                    />
+                    </Zoom>
+           
+                   
+                  </div>
+                  <div  className="flex justify-center items-center gap-x-6 mt-2">
+                      <Link  to={project.page} target="_blank"><FaEye /></Link>
+                      <Link to={project.link} target="_blank"><FaCode /></Link>
                     </div>
-                  </h4>
-              </div>
+                </div>
+              </h4>
             </div>
-           ))}
+          </div>
+        ))}
       </div>
 
-      <hr className='border-slate-200' />
+      <hr className="border-slate-200" />
 
-      <CTA /> 
+      <CTA />
     </section>
   );
 };

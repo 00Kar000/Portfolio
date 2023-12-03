@@ -16,7 +16,7 @@ const renderContect = {
   1: (
     <h1 className="relative sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, I am <span className="font-smeibold ">Karen 👋</span>
-      <br />A Software Engineer from Armenia
+      <br />A Junior Frontend Developer from Armenia
     </h1>
   ),
   2: (
