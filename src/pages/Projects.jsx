@@ -5,7 +5,7 @@ import CTA from "../components/CTA";
 import { FaEye } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
+
 
 const Projects = () => {
   return (
@@ -27,9 +27,9 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap my-20 gap-16">
+      <div className="flex justify-center flex-wrap my-20 gap-16">
         {projects.map((project) => (
-          <div className="lg:w-[400px] w-full rounded-lg shadow-xl" key={project.name}>
+          <div className="md:w-[400px]   max-sm:w-full  rounded-lg shadow-xl" key={project.name}>
             <div className="flex flex-col  py-3">
               <h4 className="text-2xl font-poppins font-semibold">
                 <div className="mt-5 flex flex-col items-center gap-2 font-poppins">
