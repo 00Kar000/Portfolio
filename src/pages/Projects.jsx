@@ -5,6 +5,7 @@ import CTA from "../components/CTA";
 import { FaEye } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import Zoom from 'react-medium-image-zoom';
+import '../utils/zoomStyle.css'
 
 
 const Projects = () => {
